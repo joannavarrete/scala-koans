@@ -8,6 +8,7 @@ import scala.language.reflectiveCalls
 
 trait KoanSuite extends AnyFunSuite with CancelAfterFailure with Matchers {
 
+  /*
   override def runTests(testName: Option[String], args: Args): Status = {
 
     if (testName == null)
@@ -77,6 +78,7 @@ trait KoanSuite extends AnyFunSuite with CancelAfterFailure with Matchers {
     }
   }
 
+  */
   def koan(name: String)(fun: => Unit) = test(name.stripMargin)(fun)
 }
 

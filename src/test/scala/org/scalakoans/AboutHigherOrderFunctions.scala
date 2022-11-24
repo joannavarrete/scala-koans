@@ -9,7 +9,7 @@ class AboutHigherOrderFunctions extends KoanSuite  {
 
   koan("A variable referencing an anonymous function") {
     val lambda = {
-      x: Int => x + 1
+      (x: Int) => x + 1
     }
     def result = List(1, 2, 3) map lambda //FYI: map runs a function on each element of a collection
     result should be(__)
@@ -42,7 +42,7 @@ class AboutHigherOrderFunctions extends KoanSuite  {
     var incrementor = 1
 
     def closure = {
-      x: Int => x + incrementor
+      (x: Int) => x + incrementor
     }
 
     val result = List(1, 2, 3) map closure

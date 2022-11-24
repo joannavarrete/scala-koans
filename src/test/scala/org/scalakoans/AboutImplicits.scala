@@ -7,6 +7,8 @@ import scala.language.implicitConversions
 
 class AboutImplicits extends KoanSuite  {
 
+  /* TODO: This koan breaks with Scala 3 
+
   koan("""Implicits wrap around existing classes to provide extra functionality
            |   This is similar to \'monkey patching\' in Ruby, and Meta-Programming in Groovy.
            |   Creating a method isOdd for Int, which doesn't exist""") {
@@ -20,7 +22,9 @@ class AboutImplicits extends KoanSuite  {
     19.isOdd() should be(__)
     20.isOdd() should be(__)
   }
+*/
 
+ /*   TODO: This koan breaks with Scala 3
   koan("""Implicits rules can be imported into your scope with an import""") {
     object MyPredef {
 
@@ -38,7 +42,7 @@ class AboutImplicits extends KoanSuite  {
     19.isOdd() should be(__)
     20.isOdd() should be(__)
   }
-
+*/
   koan("""Implicits can be used to automatically convert one type to another""") {
 
     import java.math.BigInteger
